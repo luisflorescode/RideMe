@@ -50,6 +50,20 @@ a {
   text-decoration:none;
 }
 
+button {
+  padding: .75vw 1vw;
+  font-size: 1.15vw;
+  color: $light-color;
+  background-color: $success-color;
+  border: none;
+  border-radius: 1.5vw;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: $select-color;
+}
+
 :focus {
   outline: none;
 }
@@ -69,3 +83,11 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+
+@mixin flexColCenCen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
