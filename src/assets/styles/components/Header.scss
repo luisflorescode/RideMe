@@ -1,4 +1,4 @@
-@import '../App.scss';
+@import "../App.scss";
 
 .header {
   @include flexBetCen;
@@ -34,7 +34,7 @@
       list-style: none;
       transition: color 750ms ease-in;
     }
-    
+
     .header__nav-item:hover {
       color: $success-color;
       cursor: pointer;
