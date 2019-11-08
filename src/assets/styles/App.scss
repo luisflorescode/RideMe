@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  font-size: 1.25vw;
+}
+
+body {
+  margin: 0;
+  color: $dark-color;
+  background-color: $secondary-color;
+  font-family: $text-font;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $primary-color;
+    font-family: $title-font;
+  }
+
+  h1 {
+    font-size: 2.5vw;
+  }
+
+  h2 {
+    font-size: 1.875vw;
+  }
+
+  h3 {
+    font-size: 1.4625vw;
+  }
+
+  h4 {
+    font-size: 1.25vw;
+  }
+
+  h5 {
+    font-size: 1.0375vw;
+  }
+
+  h6 {
+    font-size: 0.8375vw;
+  }
+}
