@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import './assets/styles/App.scss';
 
 const App = () => (
   <div>Hello, i am a  react app.</div>
