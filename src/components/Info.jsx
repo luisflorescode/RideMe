@@ -1,6 +1,6 @@
 import React from 'react';
-import '../assets/styles/components/Info.scss';
 import logo from '../assets/static/logo.png';
+import '../assets/styles/components/Info.scss';
 
 const Info = () => (
   <section className='info'>

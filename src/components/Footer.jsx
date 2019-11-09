@@ -1,8 +1,6 @@
 import React from 'react';
-
-import '../assets/styles/components/Footer.scss';
-
 import logoPlatzi from '../assets/static/logo-platzi.png';
+import '../assets/styles/components/Footer.scss';
 
 const Footer = () => (
   <footer className='footer '>
