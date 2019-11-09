@@ -159,6 +159,11 @@ button:disabled:hover {
     font-size: 1vw;
   }
 
+  .inputFile {
+    color: $light-color;
+    font-size: 1vw;
+  }
+
   .formVertical {
     @include flexColStaCen;
   }

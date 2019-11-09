@@ -91,6 +91,7 @@ const RegisterForm = (props) => {
           <div className='formHorizontal__line-item'>
             <span className='label'>Foto de perfil</span>
             <Field
+              className='inputFile'
               type='file'
               name='photo'
             />
@@ -150,6 +151,10 @@ export default withFormik({
 
     if (!values.telephone) {
       errors.telephone = 'Ingresa tu teléfono.';
+    }
+
+    if (!values.photo) {
+      errors.photo = 'Sube una foto de perfil.';
     }
 
     return errors;
