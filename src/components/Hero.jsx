@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import heroImg from '../assets/static/hero.jpg';
 import '../assets/styles/components/Hero.scss';
 
@@ -11,9 +12,11 @@ const Hero = () => (
         Descubre una nueva manera de viajar, en RideMe te brindamos seguridad y
         la mayor comodidad en cada viaje.
       </p>
-      <button className='hero__right-button' type='button'>
-        Regístrate y comienza a viajar
-      </button>
+      <Link to='/register'>
+        <button className='hero__right-button' type='button'>
+          Regístrate y comienza a viajar
+        </button>
+      </Link>
     </article>
   </section>
 );

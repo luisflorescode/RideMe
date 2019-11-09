@@ -12,6 +12,18 @@
   align-items: center;
 }
 
+@mixin flexStaSta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin flexStaCen {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 @mixin flexColCen {
   display: flex;
   flex-direction: column;
@@ -149,6 +161,31 @@ button:disabled:hover {
 
   .formVertical {
     @include flexColStaCen;
+  }
+
+  .formHorizontal {
+    .formHorizontal__line {
+      @include flexStaSta;
+
+      .formHorizontal__line-item {
+        @include flexColStaCen;
+        margin-right: 2.5vw;
+      }
+
+      .formHorizontal__line-item:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .buttonContainer {
+      @include flexCenCen;
+      width: 100%;
+
+      button {
+        min-width: 35%;
+        width: fit-content;
+      }
+    }
   }
 
   button {

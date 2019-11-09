@@ -1,9 +1,10 @@
 import React from 'react';
 import Horizontal from '../layouts/Horizontal';
+import RegisterForm from '../components/RegisterForm';
 
 const Register = () => (
   <Horizontal>
-    Hello, i am Register.
+    <RegisterForm />
   </Horizontal>
 );
 
