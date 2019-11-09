@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './assets/styles/App.scss';
-import Horizontal from './layouts/Horizontal';
+import Landing from './containers/Landing';
 
 const App = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path='/login' component={Horizontal} />
-      <Route exact path='/' component={Horizontal} />
+      <Route exact path='/login' component={Landing} />
+      <Route exact path='/' component={Landing} />
     </Switch>
   </BrowserRouter>
 );

@@ -1,0 +1,6 @@
+@import '../App.scss';
+
+.horizontal__content {
+  height: calc(100vh - 10vw);
+  overflow: auto;
+}

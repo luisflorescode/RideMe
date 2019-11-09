@@ -51,17 +51,23 @@ a {
 }
 
 button {
-  padding: .75vw 1vw;
-  font-size: 1.15vw;
-  color: $light-color;
   background-color: $success-color;
   border: none;
   border-radius: 1.5vw;
+  color: $light-color;
+  padding: .75vw 1vw;
+  font-size: 1.15vw;
+  transition: background-color 750ms ease-in;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
   background-color: $select-color;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 50%;
 }
 
 :focus {
@@ -80,7 +86,7 @@ button:hover{
 
 @mixin flexCenCen {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 

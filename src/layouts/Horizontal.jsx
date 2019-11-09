@@ -1,13 +1,16 @@
 import React from 'react';
+
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Hero from '../components/Hero';
+
+import '../assets/styles/layouts/Horizontal.scss';
 
 const Horizontal = ({ children }) => (
   <>
     <Header />
-    {children}
-    <Hero />
+    <div className='horizontal__content'>
+      {children}
+    </div>
     <Footer />
   </>
 );
