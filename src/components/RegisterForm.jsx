@@ -11,7 +11,7 @@ const RegisterForm = (props) => {
   return (
     <div className='registerForm form'>
       <h2 className='registerForm__title'>Registro</h2>
-      <span>Por favor ingresa tus datos.</span>
+      <span>Por favor ingresa los siguientes datos:</span>
       <Form className='registerForm__form formHorizontal'>
         <div className='formHorizontal__line'>
           <div className='formHorizontal__line-item'>
@@ -136,7 +136,7 @@ export default withFormik({
     }
 
     if (!values.firstLastName) {
-      errors.firstLastName = 'Ingresa tu primer apellído.';
+      errors.firstLastName = 'Ingresa tu primer apellido.';
     }
 
     if (!values.email) {
@@ -147,6 +147,8 @@ export default withFormik({
       errors.password = 'Ingresa una contraseña.';
     } else if (!values.passwordConfirm) {
       errors.passwordConfirm = 'Confirma la contraseña ingresada.';
+    } else if (values.password !== values.passwordConfirm) {
+      errors.passwordConfirm = 'Las contraseñas no coinciden.';
     }
 
     if (!values.telephone) {
