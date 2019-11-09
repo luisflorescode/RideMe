@@ -1,5 +1,37 @@
 @import "./Vars.scss";
 
+@mixin flexBetCen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexCenCen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexColCen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flexColCenCen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexColStaCen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -19,6 +51,7 @@ body {
   h6 {
     color: $primary-color;
     font-family: $title-font;
+    margin-top: 0;
   }
 
   h1 {
@@ -55,8 +88,8 @@ button {
   border: none;
   border-radius: 1.5vw;
   color: $light-color;
-  padding: .75vw 1vw;
   font-size: 1.15vw;
+  padding: .75vw 1vw;
   transition: background-color 750ms ease-in;
 }
 
@@ -70,6 +103,12 @@ button:disabled {
   opacity: 50%;
 }
 
+button:disabled:hover {
+  background-color: $success-color;
+  cursor: default;
+  opacity: 50%;
+}
+
 :focus {
   outline: none;
 }
@@ -78,22 +117,44 @@ button:disabled {
   color: inherit;
 }
 
-@mixin flexBetCen {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.form {
+  @include flexColStaCen;
+  background-color: $primary-color;
+  border-radius: 1vw;
+  color: $light-color;
+  height: fit-content;
+  padding: 2.5vw;
+  width: fit-content;
+
+  h2 {
+    color: $success-color;
+  }
+
+  .label {
+    margin-top: 1vw;
+  }
+
+  input {
+    border: none;
+    border-radius: 1.5vw;
+    color: $dark-color;
+    font-size: 1.20vw;
+    padding: .5vw 1vw;
+  }
+
+  .inputError {
+    color: $danger-color;
+    font-size: 1vw;
+  }
+
+  .formVertical {
+    @include flexColStaCen;
+  }
+
+  button {
+    margin-top: 1.5vw;
+    width: 100%;
+  }
 }
 
-@mixin flexCenCen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin flexColCenCen {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
 
