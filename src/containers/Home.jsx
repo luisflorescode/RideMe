@@ -1,9 +1,8 @@
 import React from 'react';
+import Vertical from '../layouts/Vertical';
 
 const Home = () => (
-  <div>
-    Hello, i am Home
-  </div>
+  <Vertical />
 );
 
 export default Home;

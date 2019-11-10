@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './containers/Home';
 import Landing from './containers/Landing';
 import Login from './containers/Login';
 import Register from './containers/Register';
-import Home from './containers/Home';
 import './assets/styles/App.scss';
 
 const App = () => (

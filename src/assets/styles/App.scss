@@ -12,6 +12,12 @@
   align-items: center;
 }
 
+@mixin flexEndCen {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 @mixin flexStaSta {
   display: flex;
   justify-content: flex-start;
@@ -201,4 +207,10 @@ button:disabled:hover {
   }
 }
 
+.link {
+  transition: color 750ms ease-in;
+}
 
+.link:hover {
+  color: $success-color;
+}
