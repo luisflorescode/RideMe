@@ -4,12 +4,14 @@ import Home from './containers/Home';
 import Landing from './containers/Landing';
 import Login from './containers/Login';
 import Register from './containers/Register';
+import Ride from './containers/Ride';
 import './assets/styles/App.scss';
 
 const App = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path='/home' component={Home} />
+      <Route exact path='/ride' component={Ride} />
       <Route exact path='/register' component={Register} />
       <Route exact path='/login' component={Login} />
       <Route exact path='/' component={Landing} />
