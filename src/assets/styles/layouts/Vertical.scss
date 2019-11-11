@@ -4,7 +4,7 @@
   background-color: $primary-color;
   color: $light-color;
   height: 100vh;
-  padding: 2.5vw;
+  padding: 2.5vw 2vw;
   width: 25vw;
 
   .vertical__logo {
@@ -12,7 +12,8 @@
     width: 25%;
 
     .vertical__logo-img {
-      margin: 0 1vw;
+      margin: 0;
+      margin-right: 1vw;
       width: 50%;
       height: auto;
     }
@@ -28,7 +29,8 @@
   }
 
   .vertical__content {
-    min-height: 75vh;
+    margin: 2.5vw 0;
+    height: 60vh;
   }
 
   .vertical__logout {
