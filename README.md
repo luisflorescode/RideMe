@@ -10,3 +10,8 @@ npm install
 ```
 npm run start
 ```
+
+### App para producción
+```
+npm run build
+```
