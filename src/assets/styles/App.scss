@@ -50,6 +50,14 @@
   align-items: flex-start;
 }
 
+input {
+  border: none;
+  border-radius: 1.5vw;
+  color: $dark-color;
+  font-size: 1.20vw;
+  padding: .5vw 1vw;
+}
+
 * {
   box-sizing: border-box;
 }

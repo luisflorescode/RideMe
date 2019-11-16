@@ -1,13 +1,11 @@
-const INITIAL_STATE = {
-  isLogged: false
-};
+const INITIAL_STATE = {};
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case 'login_request':
+    case 'SET_ORIGIN':
       return {
         ...state,
-        isLogged: action.payload
+        origin: action.payload
       };
     default:
       return state;

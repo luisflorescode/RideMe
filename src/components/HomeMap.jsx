@@ -1,10 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
+import destinypin from '../assets/static/destinypin.png';
 import pin from '../assets/static/pin.png';
 
 const containerStyle = {
   height: '100%',
-  width: '75%',
+  width: '75%'
 };
 
 let currentLat;
@@ -19,14 +21,14 @@ if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(setPosition);
 }
 
-export class HomeMap extends React.Component {
+export class _HomeMap extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       currentLocation: {
         lat: currentLat,
-        lng: currentLng,
-      },
+        lng: currentLng
+      }
     };
   }
 
@@ -38,18 +40,34 @@ export class HomeMap extends React.Component {
       <Map
         google={google}
         containerStyle={containerStyle}
-        zoom={16}
+        zoom={15}
+        center={currentLocation}
         initialCenter={currentLocation}
       >
-        <Marker
-          position={currentLocation}
-          icon={pin}
-        />
+        {this.props.originReducer.origin ? (
+          <Marker position={this.props.originReducer.origin} icon={pin} />
+        ) : (
+          ''
+        )}
+        {this.props.destinyReducer.destiny ? (
+          <Marker
+            position={this.props.destinyReducer.destiny}
+            icon={destinypin}
+          />
+        ) : (
+          ''
+        )}
       </Map>
     );
   }
 }
 
+const mapStateToProps = reducers => {
+  return reducers;
+};
+
+const HomeMap = connect(mapStateToProps)(_HomeMap);
+
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCmjvkXB_DMnBUNwxQztLMStyQmA_szbNw',
+  apiKey: 'AIzaSyCmjvkXB_DMnBUNwxQztLMStyQmA_szbNw'
 })(HomeMap);
