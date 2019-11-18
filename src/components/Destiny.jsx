@@ -36,11 +36,11 @@ class Destiny extends React.Component {
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <div>
-            <span className='label'>Elige tu origen</span>
+            <span className='label'>Elige tu destino</span>
             <input
               className
               {...getInputProps({
-                placeholder: 'Ingresa tu origen',
+                placeholder: 'Ingresa tu destino',
                 className: 'location-search-input'
               })}
             />

@@ -5,10 +5,6 @@ import * as originActions from '../actions/originActions';
 import '../assets/styles/components/HomeOptions.scss';
 
 class HomeOptions extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(this.setPosition);
